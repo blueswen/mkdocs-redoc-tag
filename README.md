@@ -39,9 +39,9 @@ A MkDocs plugin supports adding [Redoc](https://github.com/Redocly/redoc) to the
     <redoc src="https://petstore.swagger.io/v2/swagger.json"/>
     ```
 
-    ![Redoc Sample Image](sample.png)
+    ![Redoc Sample Image](https://blueswen.github.io/mkdocs-redoc-tag/sample.png)
 
-4. You may customize the plugin by passing options in mkdocs.yml, check more details on [options](./options/):
+4. You may customize the plugin by passing options in mkdocs.yml:
 
     ```yaml
     plugins:
