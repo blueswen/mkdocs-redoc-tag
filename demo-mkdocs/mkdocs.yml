@@ -1,0 +1,66 @@
+site_name: MkDocs Swagger UI Tag
+
+repo_url: https://github.com/blueswen/mkdocs-redoc-tag
+repo_name: blueswen/mkdocs-redoc-tag
+site_url: https://blueswen.github.io/mkdocs-redoc-tag/
+site_dir: ../docs
+edit_uri: ""
+
+theme:
+  name: material
+  icon:
+    logo: simple/openapiinitiative
+  features:
+    - toc.integrate
+    - navigation.tabs
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue grey
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
+extra:
+  analytics:
+    provider: google
+    property: G-TR8HBK7XLX
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+plugins:
+  - redoc-tag
+  - glightbox:
+      touchNavigation: true
+      loop: true
+      height: auto
+      width: 80%
+
+nav:
+  - Home: index.md
+  - Pet Store Example: pet-store.md 
+  - Demo: 
+    - Static File: demo/static-file.md
+    - Full Width Redoc:  demo/pet-store-full-width.md
