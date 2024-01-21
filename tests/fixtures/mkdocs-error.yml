@@ -1,0 +1,6 @@
+site_name: test mkdocs_redoc_tag
+use_directory_urls: true
+docs_dir: error_docs
+
+plugins:
+    - redoc-tag

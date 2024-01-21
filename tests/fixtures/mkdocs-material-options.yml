@@ -1,0 +1,13 @@
+site_name: test mkdocs_redoc_tag
+use_directory_urls: true
+
+theme:
+  name: material
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+
+plugins:
+    - redoc-tag:
+        dark_scheme_name: white

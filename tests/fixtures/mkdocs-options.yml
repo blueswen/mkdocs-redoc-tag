@@ -1,0 +1,7 @@
+site_name: test mkdocs_redoc_tag
+use_directory_urls: true
+
+plugins:
+    - redoc-tag:
+        height: 100vh
+        background: gray
