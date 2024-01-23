@@ -2,7 +2,7 @@
 
 <a target="_blank" href="https://pypi.org/project/mkdocs-redoc-tag"><img src="https://img.shields.io/pypi/v/mkdocs-redoc-tag.svg" alt="PyPI version"/></a>
 <a target="_blank" href="https://pypi.org/project/mkdocs-redoc-tag"><img src="https://img.shields.io/pypi/dm/mkdocs-redoc-tag.svg" alt="PyPI downloads"/></a>
-<!-- <a target="_blank" href="https://codecov.io/gh/blueswen/mkdocs-redoc-tag"><img src="https://codecov.io/gh/blueswen/mkdocs-redoc-tag/branch/main/graph/badge.svg" alt="Codecov"/></a> -->
+<a target="_blank" href="https://codecov.io/gh/blueswen/mkdocs-redoc-tag"><img src="https://codecov.io/gh/blueswen/mkdocs-redoc-tag/branch/main/graph/badge.svg" alt="Codecov"/></a>
 
 A MkDocs plugin supports adding [Redoc](https://github.com/Redocly/redoc) to the page.
 
