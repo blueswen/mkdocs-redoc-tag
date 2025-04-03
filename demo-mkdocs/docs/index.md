@@ -17,7 +17,7 @@ A MkDocs plugin supports adding [Redoc](https://github.com/Redocly/redoc) to the
 1. Python Package
     1. beautifulsoup4>=4.11.1
 2. Redoc standalone javascript from [official CDN](https://github.com/Redocly/redoc?tab=readme-ov-file#releases)
-    1. redoc==2.1.3
+    1. redoc==2.4.0
 
 ## Usage
 
