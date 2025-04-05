@@ -37,7 +37,7 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3 :: Only",
     "Topic :: Documentation",
-    Topic :: Text Processing,
+    "Topic :: Text Processing"
 ]
 
 [project.urls]
