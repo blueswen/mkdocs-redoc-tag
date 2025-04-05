@@ -1,0 +1,75 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mkdocs-redoc-tag"
+version = "0.2.0"
+description = "A MkDocs plugin supports for add Redoc in page."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.8"
+authors = [
+  {name = "Blueswen", email = "blueswen.tw@gmail.com"}
+]
+dependencies = [
+    "beautifulsoup4>=4.13.3",
+]
+keywords = [
+    "mkdocs",
+    "plugin",
+    "redoc",
+    "openapi"
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Environment :: Web Environment",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Documentation",
+    "Topic :: OpenAPI",
+]
+
+[project.urls]
+Homepage = "https://blueswen.github.io/mkdocs-redoc-tag/"
+Source = "https://github.com/blueswen/mkdocs-redoc-tag"
+Issues = "https://github.com/blueswen/mkdocs-redoc-tag/issues"
+History = "https://github.com/blueswen/mkdocs-redoc-tag/blob/main/CHANGELOG"
+
+[project.entry-points."mkdocs.plugins"]
+redoc-tag = "mkdocs_redoc_tag.plugin:RedocPlugin"
+
+[dependency-groups]
+dev = [
+    "bandit>=1.7.10",
+    "click>=8.1.8",
+    "codecov>=2.1.13",
+    "mkdocs>=1.6.1",
+    "mkdocs-glightbox>=0.4.0",
+    "mkdocs-material>=9.6.7",
+    "pyright>=1.1.396",
+    "pytest>=8.3.5",
+    "pytest-cov>=5.0.0",
+    "pytest-playwright>=0.5.2",
+    "ruff>=0.9.10",
+    "twine>=6.1.0",
+]
+
+[tool.pyright]
+include = ["mkdocs_redoc_tag/plugin.py", "tests/test_builds.py"]
+
+[tool.hatch.build.targets.wheel]
+include = ["/mkdocs_redoc_tag"]
+
+[tool.hatch.build.targets.sdist]
+include = ["/mkdocs_redoc_tag"]
