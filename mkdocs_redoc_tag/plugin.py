@@ -86,7 +86,7 @@ class RedocPlugin(BasePlugin):
             js_dir = utils.get_relative_url(
                 utils.normalize_url("assets/javascripts/"), page.url
             )
-            env = Environment(loader=FileSystemLoader(os.path.join(base_path, "redoc")))
+            env = Environment(autoescape=True, loader=FileSystemLoader(os.path.join(base_path, "redoc")))
             template = env.get_template("redoc.html")
 
             page_dir = os.path.dirname(
@@ -161,7 +161,7 @@ class RedocPlugin(BasePlugin):
         iframe["style"] = f"overflow:hidden;width:100%;height:{self.config['height']};"
         iframe["width"] = "100%"
         iframe["class"] = "redoc-iframe"
-        redoc_ele.replaceWith(iframe)
+        redoc_ele.replace_with(iframe)
 
     def on_post_build(self, config, **kwargs):
         """Copy Redoc css and js files to assets directory"""
