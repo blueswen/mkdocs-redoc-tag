@@ -1,0 +1,443 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://blueswen.github.io/mkdocs-redoc-tag/" rel="canonical"/>
+<link href="pet-store/" rel="next"/>
+<link href="assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.11+insiders-4.53.16" name="generator"/>
+<title>MkDocs Swagger UI Tag</title>
+<link href="assets/stylesheets/main.ade31302.min.css" rel="stylesheet"/>
+<link href="assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-TR8HBK7XLX"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-TR8HBK7XLX",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-TR8HBK7XLX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+<script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+ <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#mkdocs-redoc-tag">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="MkDocs Swagger UI Tag" class="md-header__button md-logo" data-md-component="logo" href="." title="MkDocs Swagger UI Tag">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.039 0a2.96 2.96 0 0 0-2.65 4.274l-6.447 6.447a2.96 2.96 0 1 0 1.335 1.336l6.447-6.447A2.959 2.959 0 1 0 21.04 0zM10.628 2.745q-.108.001-.214.004-.107.002-.215.005a11 11 0 0 0-1.335.138l-.03.005-.185.033-.105.02a8 8 0 0 0-.289.062l-.032.008a10.7 10.7 0 0 0-2.55.95l-.155.089q-.094.052-.187.105-.07.039-.14.079H5.19l-.01.005-.036.02v.002l.111.184 3.15 5.23a4 4 0 0 1 .38-.202 4.3 4.3 0 0 1 1.628-.413q.107-.007.214-.008zm.428.01v6.333q.489.05.96.209l4.66-4.66q-.259-.181-.528-.347l-.026-.015q-.084-.052-.168-.1l-.098-.056-.099-.055-.171-.092-.027-.014a11 11 0 0 0-1.425-.617c-.69-.241-1.403-.41-2.128-.505l-.089-.012-.09-.01-.17-.019-.049-.004-.204-.017a6 6 0 0 0-.255-.015q-.046-.004-.093-.004M4.782 4.498a10 10 0 0 0-1.36 1.062l4.461 4.461.018.018q.073-.06.149-.116l-.011-.018zm-1.67 1.36q-.074.076-.147.154l-.149.155q-.494.536-.902 1.118l-.039.056a11 11 0 0 0-.216.326 10.6 10.6 0 0 0-1.65 5.276l-.006.215-.003.214h6.317c0-.072.007-.143.01-.214.005-.072.006-.144.013-.215a4.3 4.3 0 0 1 .952-2.3c.045-.055.096-.106.144-.16.048-.052.093-.107.144-.158zm16.255 1.464-4.663 4.663q.158.47.21.959h6.332l-.004-.094a12 12 0 0 0-.032-.456l-.005-.052-.026-.241v-.009l-.033-.24v-.009a11 11 0 0 0-.327-1.493l-.003-.01-.07-.228-.01-.03-.069-.204-.02-.055a6 6 0 0 0-.153-.405l-.093-.227-.063-.144-.037-.081-.08-.171-.024-.052-.096-.194-.014-.027-.112-.212-.004-.008a11 11 0 0 0-.604-.98m-4.43 6.05c0 .071-.006.142-.01.214q-.003.108-.012.214a4.3 4.3 0 0 1-.952 2.301c-.045.055-.096.107-.144.16s-.093.108-.144.159l4.467 4.467q.075-.078.148-.155.076-.078.148-.155.497-.538.905-1.122l.032-.046.098-.144.085-.13.04-.063a10.6 10.6 0 0 0 1.647-5.272q.004-.107.006-.214.003-.107.004-.214zM.01 13.8l.004.093.01.179.005.076.017.206.005.046q.01.115.024.228l.003.022.033.248q.109.758.327 1.497l.002.006q.034.116.071.23l.004.014.005.014a16 16 0 0 0 .153.439l.03.08.059.148.093.228.062.14.038.084.078.169.027.054a11 11 0 0 0 .225.441l.025.043 5.408-3.258.02-.012a4.3 4.3 0 0 1-.395-1.414h-.025zm.505 2.846-.206.058.002.005zm6.425-1.052-5.415 3.262q.125.207.259.406l.008.014.004.005.008.014h.001l.022.032.001.002v.001a11 11 0 0 0 .298.417l.006.008a10 10 0 0 0 .29.368l.033.04q.064.078.13.153l.057.065.112.127.064.069.029.031.083.09.035.035q.073.077.149.153L7.58 16.42a4 4 0 0 1-.285-.321 4.4 4.4 0 0 1-.356-.505zm6.416 1.111q-.075.06-.15.116l.011.018 3.257 5.407q.227-.148.446-.307.473-.348.914-.756l-4.46-4.46zm-5.457.003-.015.015-4.46 4.46.195.176q.033.03.065.058l.152.13.215.174.023.017.191.148.008.005q.403.3.834.564l.03.018.164.097.101.057a6 6 0 0 0 .27.148q.012.007.025.013.243.127.493.24l.158-.385 2.243-5.448.009-.02a4.3 4.3 0 0 1-.701-.467m4.951.353q-.092.054-.187.104a4.32 4.32 0 0 1-3.271.336c-.069-.02-.135-.047-.203-.071-.067-.024-.136-.044-.202-.072l-2.242 5.444-.088.213-.075.183v.001l.017.007.019.007.005.003q.079.03.159.06.1.04.2.077l.102.04c.702.247 1.43.42 2.168.518l.087.012.09.01.172.019a7 7 0 0 0 .252.022q.035 0 .071.003l.184.011.112.005a7 7 0 0 0 .358.007h.05a10.7 10.7 0 0 0 1.793-.15l.185-.034.105-.02.109-.023.18-.04.032-.008a10.7 10.7 0 0 0 2.55-.95q.078-.044.156-.089.094-.052.187-.105.065-.035.13-.073h.001l.002-.002.002-.001.002-.001.007-.004.042-.025-.11-.183-.11-.184zm3.262 5.414-.042.025zm-.055.033h-.002z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            MkDocs Swagger UI Tag
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme)" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"></path></svg>
+</label>
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="blue" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="blue-grey" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+<input aria-label="Switch to system preference" class="md-option" data-md-color-accent="blue" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="blue-grey" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to system preference">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+</label>
+</form>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/blueswen/mkdocs-redoc-tag" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
+</div>
+<div class="md-source__repository">
+    blueswen/mkdocs-redoc-tag
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href=".">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="pet-store/">
+        
+  
+  
+    
+  
+  Pet Store Example
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="demo/static-file/">
+          
+  
+  
+  Demo
+
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="MkDocs Swagger UI Tag" class="md-nav__button md-logo" data-md-component="logo" href="." title="MkDocs Swagger UI Tag">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.039 0a2.96 2.96 0 0 0-2.65 4.274l-6.447 6.447a2.96 2.96 0 1 0 1.335 1.336l6.447-6.447A2.959 2.959 0 1 0 21.04 0zM10.628 2.745q-.108.001-.214.004-.107.002-.215.005a11 11 0 0 0-1.335.138l-.03.005-.185.033-.105.02a8 8 0 0 0-.289.062l-.032.008a10.7 10.7 0 0 0-2.55.95l-.155.089q-.094.052-.187.105-.07.039-.14.079H5.19l-.01.005-.036.02v.002l.111.184 3.15 5.23a4 4 0 0 1 .38-.202 4.3 4.3 0 0 1 1.628-.413q.107-.007.214-.008zm.428.01v6.333q.489.05.96.209l4.66-4.66q-.259-.181-.528-.347l-.026-.015q-.084-.052-.168-.1l-.098-.056-.099-.055-.171-.092-.027-.014a11 11 0 0 0-1.425-.617c-.69-.241-1.403-.41-2.128-.505l-.089-.012-.09-.01-.17-.019-.049-.004-.204-.017a6 6 0 0 0-.255-.015q-.046-.004-.093-.004M4.782 4.498a10 10 0 0 0-1.36 1.062l4.461 4.461.018.018q.073-.06.149-.116l-.011-.018zm-1.67 1.36q-.074.076-.147.154l-.149.155q-.494.536-.902 1.118l-.039.056a11 11 0 0 0-.216.326 10.6 10.6 0 0 0-1.65 5.276l-.006.215-.003.214h6.317c0-.072.007-.143.01-.214.005-.072.006-.144.013-.215a4.3 4.3 0 0 1 .952-2.3c.045-.055.096-.106.144-.16.048-.052.093-.107.144-.158zm16.255 1.464-4.663 4.663q.158.47.21.959h6.332l-.004-.094a12 12 0 0 0-.032-.456l-.005-.052-.026-.241v-.009l-.033-.24v-.009a11 11 0 0 0-.327-1.493l-.003-.01-.07-.228-.01-.03-.069-.204-.02-.055a6 6 0 0 0-.153-.405l-.093-.227-.063-.144-.037-.081-.08-.171-.024-.052-.096-.194-.014-.027-.112-.212-.004-.008a11 11 0 0 0-.604-.98m-4.43 6.05c0 .071-.006.142-.01.214q-.003.108-.012.214a4.3 4.3 0 0 1-.952 2.301c-.045.055-.096.107-.144.16s-.093.108-.144.159l4.467 4.467q.075-.078.148-.155.076-.078.148-.155.497-.538.905-1.122l.032-.046.098-.144.085-.13.04-.063a10.6 10.6 0 0 0 1.647-5.272q.004-.107.006-.214.003-.107.004-.214zM.01 13.8l.004.093.01.179.005.076.017.206.005.046q.01.115.024.228l.003.022.033.248q.109.758.327 1.497l.002.006q.034.116.071.23l.004.014.005.014a16 16 0 0 0 .153.439l.03.08.059.148.093.228.062.14.038.084.078.169.027.054a11 11 0 0 0 .225.441l.025.043 5.408-3.258.02-.012a4.3 4.3 0 0 1-.395-1.414h-.025zm.505 2.846-.206.058.002.005zm6.425-1.052-5.415 3.262q.125.207.259.406l.008.014.004.005.008.014h.001l.022.032.001.002v.001a11 11 0 0 0 .298.417l.006.008a10 10 0 0 0 .29.368l.033.04q.064.078.13.153l.057.065.112.127.064.069.029.031.083.09.035.035q.073.077.149.153L7.58 16.42a4 4 0 0 1-.285-.321 4.4 4.4 0 0 1-.356-.505zm6.416 1.111q-.075.06-.15.116l.011.018 3.257 5.407q.227-.148.446-.307.473-.348.914-.756l-4.46-4.46zm-5.457.003-.015.015-4.46 4.46.195.176q.033.03.065.058l.152.13.215.174.023.017.191.148.008.005q.403.3.834.564l.03.018.164.097.101.057a6 6 0 0 0 .27.148q.012.007.025.013.243.127.493.24l.158-.385 2.243-5.448.009-.02a4.3 4.3 0 0 1-.701-.467m4.951.353q-.092.054-.187.104a4.32 4.32 0 0 1-3.271.336c-.069-.02-.135-.047-.203-.071-.067-.024-.136-.044-.202-.072l-2.242 5.444-.088.213-.075.183v.001l.017.007.019.007.005.003q.079.03.159.06.1.04.2.077l.102.04c.702.247 1.43.42 2.168.518l.087.012.09.01.172.019a7 7 0 0 0 .252.022q.035 0 .071.003l.184.011.112.005a7 7 0 0 0 .358.007h.05a10.7 10.7 0 0 0 1.793-.15l.185-.034.105-.02.109-.023.18-.04.032-.008a10.7 10.7 0 0 0 2.55-.95q.078-.044.156-.089.094-.052.187-.105.065-.035.13-.073h.001l.002-.002.002-.001.002-.001.007-.004.042-.025-.11-.183-.11-.184zm3.262 5.414-.042.025zm-.055.033h-.002z"></path></svg>
+</a>
+    MkDocs Swagger UI Tag
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/blueswen/mkdocs-redoc-tag" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
+</div>
+<div class="md-source__repository">
+    blueswen/mkdocs-redoc-tag
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href=".">
+<span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#features">
+<span class="md-ellipsis">
+      
+        Features
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dependency">
+<span class="md-ellipsis">
+      
+        Dependency
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#usage">
+<span class="md-ellipsis">
+      
+        Usage
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-it-works">
+<span class="md-ellipsis">
+      
+        How it works
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#license">
+<span class="md-ellipsis">
+      
+        License
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reference">
+<span class="md-ellipsis">
+      
+        Reference
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="pet-store/">
+<span class="md-ellipsis">
+    
+  
+    Pet Store Example
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Demo
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Demo
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="demo/static-file/">
+<span class="md-ellipsis">
+    
+  
+    Static File
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="demo/pet-store-full-width/">
+<span class="md-ellipsis">
+    
+  
+    Full Width Redoc
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="mkdocs-redoc-tag">MkDocs Redoc Tag</h1>
+<p><a href="https://pypi.org/project/mkdocs-redoc-tag" target="_blank"><img alt="PyPI version" src="https://img.shields.io/pypi/v/mkdocs-redoc-tag.svg"/></a>
+<a href="https://pypi.org/project/mkdocs-redoc-tag" target="_blank"><img alt="PyPI downloads" src="https://img.shields.io/pypi/dm/mkdocs-redoc-tag.svg"/></a>
+<a href="https://codecov.io/gh/blueswen/mkdocs-redoc-tag" target="_blank"><img alt="Codecov" src="https://codecov.io/gh/blueswen/mkdocs-redoc-tag/branch/main/graph/badge.svg"/></a></p>
+<p>A MkDocs plugin supports adding <a href="https://github.com/Redocly/redoc">Redoc</a> to the page.</p>
+<h2 id="features">Features</h2>
+<ol>
+<li>OpenAPI Specification file from online over URL or static file in docs</li>
+<li>All dependencies are using static files handled by the plugin not from CDN, especially suitable for those documents been deployed in the intranet</li>
+<li>Synchronized dark mode with <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a></li>
+</ol>
+<h2 id="dependency">Dependency</h2>
+<ol>
+<li>Python Package<ol>
+<li>beautifulsoup4&gt;=4.11.1</li>
+</ol>
+</li>
+<li>Redoc standalone javascript from <a href="https://github.com/Redocly/redoc?tab=readme-ov-file#releases">official CDN</a><ol>
+<li>redoc==2.4.0</li>
+</ol>
+</li>
+</ol>
+<h2 id="usage">Usage</h2>
+<ol>
+<li>
+<p>Install the plugin from Pypi</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>mkdocs-redoc-tag
+</code></pre></div>
+</li>
+<li>
+<p>Add <code>redoc-tag</code> plugin into your mkdocs.yml plugins sections:</p>
+<p><div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nt">plugins</span><span class="p">:</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">   </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redoc-tag</span>
+</code></pre></div>
+3. Add <code>redoc</code> tag in markdown to include Redoc:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">redoc</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://petstore.swagger.io/v2/swagger.json"</span><span class="p">/&gt;</span>
+</code></pre></div>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="80%" href="sample.png"><img alt="Redoc Sample Image" src="sample.png"/></a></p>
+</li>
+<li>
+<p>You may customize the plugin by passing options in mkdocs.yml:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nt">plugins</span><span class="p">:</span>
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">   </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">redoc-tag</span><span class="p">:</span>
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">        </span><span class="nt">background</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">White</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Options</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>background</td>
+<td>String</td>
+<td>Default: "". Redoc iframe body background attribute value. You can use any css value for background for example "#74b9ff" or "Gainsboro" or "" for nothing.</td>
+</tr>
+<tr>
+<td>height</td>
+<td>String</td>
+<td>Default: "80vh". Height of Redoc iframe.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<h2 id="how-it-works">How it works</h2>
+<ol>
+<li>Copy Redoc script file into <code>site/assets/javascripts/</code> directory</li>
+<li>Search all redoc tags, then convert them to an iframe tag and generate the iframe target html with the given OpenAPI Specification src path</li>
+</ol>
+<h2 id="license">License</h2>
+<p>This project is licensed under the MIT License - see the <a href="https://github.com/Blueswen/mkdocs-redoc-tag/blob/main/LICENSE">LICENSE.md</a> file for details.</p>
+<h2 id="reference">Reference</h2>
+<ol>
+<li><a href="https://github.com/dilanx/redark">redark</a>: source of dark mode javascript and css</li>
+</ol>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs Insiders
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["toc.integrate", "navigation.tabs"], "search": "assets/javascripts/workers/search.c7c1ca2c.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="assets/javascripts/bundle.f807c082.min.js"></script>
+<script>document$.subscribe(() => {
+            const dark_scheme_name = "slate"
+            
+            window.scheme = document.body.getAttribute("data-md-color-scheme")
+            const options = {
+                attributeFilter: ['data-md-color-scheme'],
+            };
+            function color_scheme_callback(mutations) {
+                for (let mutation of mutations) {
+                    if (mutation.attributeName === "data-md-color-scheme") {
+                        scheme = document.body.getAttribute("data-md-color-scheme")
+                        var iframe_list = document.getElementsByClassName("redoc-iframe")
+                        for(var i = 0; i < iframe_list.length; i++) {
+                            var ele = iframe_list.item(i);
+                            if (ele) {
+                                if (scheme === dark_scheme_name) {
+                                    ele.contentWindow.enable_dark_mode();
+                                } else {
+                                    ele.contentWindow.disable_dark_mode();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            observer = new MutationObserver(color_scheme_callback);
+            observer.observe(document.body, options);
+            })</script><script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": true, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
