@@ -1,3 +1,8 @@
+mkdocs-redoc-tag 0.2.0 (2025-04-05)
+
+    * Updated redoc to 2.4.0
+    * Migrated to uv and pyproject.toml for development and building
+
 mkdocs-redoc-tag 0.1.0 (2024-01-21)
 
     * First release
